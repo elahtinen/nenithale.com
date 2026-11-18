@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<style>
+  :root { color-scheme: light dark; --text: #1c1c1e; --muted: #6b6b70; --bg: #ffffff; --link: #b3261e; --rule: #e3e3e6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --text: #f2f2f4; --muted: #a0a0a6; --bg: #121214; --link: #ff8a80; --rule: #2c2c30; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 40rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  h1 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 1rem; }
+  h2 { font-size: 1.25rem; margin: 2rem 0 0.5rem; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 0.25rem; }
+  p, ul { margin: 0 0 1rem; }
+  a { color: var(--link); }
+  footer { max-width: 40rem; margin: 0 auto; padding: 1rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: 0.9rem; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+{{ content }}
+</main>
+<footer><a href="/">Nenithale</a> · <a href="/shuffleplus/support/">Shuffle+ Support</a> · <a href="/shuffleplus/privacy/">Privacy</a></footer>
+</body>
+</html>
